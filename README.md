@@ -4,7 +4,7 @@ docker run -d --name mariadb -e MYSQL_ROOT_PASSWORD=123456 -p 3306:3306 mariadb
 
 docker exec -it mariadb /bin/bash
 
-mysql -u root -p
+mariadb -u root -p
 ```
 
 ## Create Django project
