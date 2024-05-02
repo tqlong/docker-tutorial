@@ -1,1 +1,5 @@
-HELLO WORLD FROM {{name}}
+<ul>
+    {% for todo in todos %}
+    <li>{{todo.title}}: {{todo.text}}</li>
+    {% endfor %}
+</ul>
