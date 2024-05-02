@@ -1,5 +1,18 @@
-<ul>
-    {% for todo in todos %}
-    <li>{{todo.title}}: {{todo.text}}</li>
-    {% endfor %}
-</ul>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>ToDoList App</title>
+    </head>
+    <body>
+        <header>
+            <h1>TodoList</h1>
+            <hr>
+        </header>
+        <ul>
+            {% for todo in todos %}
+            <li>{{todo.title}}: {{todo.text}}</li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
