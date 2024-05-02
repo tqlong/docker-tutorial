@@ -11,7 +11,7 @@
         </header>
         <ul>
             {% for todo in todos %}
-            <li>{{todo.title}}: {{todo.text}}</li>
+            <li><a href="/todos/details/{{todo.id}}">{{todo.title}}</a>: {{todo.text}}</li>
             {% endfor %}
         </ul>
     </body>
