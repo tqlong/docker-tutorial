@@ -1,18 +1,7 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>ToDoList App</title>
-    </head>
-    <body>
-        <header>
-            <h1>TodoList</h1>
-            <hr>
-        </header>
-        <ul>
-            {% for todo in todos %}
-            <li><a href="/todos/details/{{todo.id}}">{{todo.title}}</a>: {{todo.text}}</li>
-            {% endfor %}
-        </ul>
-    </body>
-</html>
+{% include 'partials/header.html' %}
+<ul>
+    {% for todo in todos %}
+    <li><a href="/todos/details/{{todo.id}}">{{todo.title}}</a>: {{todo.text}}</li>
+    {% endfor %}
+</ul>
+{% include 'partials/footer.html' %}
