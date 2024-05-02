@@ -2,4 +2,7 @@ from django.shortcuts import render
 
 
 def index(request):
-    return render(request, 'index.html')
+    context = dict(
+        name='Long'
+    )
+    return render(request, 'index.html', context=context)
