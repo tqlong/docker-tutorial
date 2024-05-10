@@ -1,0 +1,55 @@
+{% include 'diabetes/header.html' %}
+<h2>{{status}}</h2>
+<form action="predict" method="post">
+{% csrf_token %}
+<label for="Pregnancies">Pregnancies</label>
+<input id="Pregnancies" name="Pregnancies" type="number"
+{% if Pregnancies %}value="{{Pregnancies}}"{% endif %}
+/>
+<br/>
+
+<label for="Glucose">Glucose</label>
+<input id="Glucose" name="Glucose" type="number"
+{% if Glucose %}value="{{Glucose}}"{% endif %}
+/>
+<br/>
+
+<label for="BloodPressure">Blood Pressure</label>
+<input id="BloodPressure" name="BloodPressure" type="number"
+{% if BloodPressure %}value="{{BloodPressure}}"{% endif %}
+/>
+<br/>
+
+<label for="SkinThickness">Skin Thickness</label>
+<input id="SkinThickness" name="SkinThickness" type="number"
+{% if SkinThickness %}value="{{SkinThickness}}"{% endif %}
+/>
+<br/>
+
+<label for="Insulin">Insulin</label>
+<input id="Insulin" name="Insulin" type="number"
+{% if Insulin %}value="{{Insulin}}"{% endif %}
+/>
+<br/>
+
+<label for="BMI">BMI</label>
+<input id="BMI" name="BMI" type="number" step="0.1"
+{% if BMI %}value="{{BMI}}"{% endif %}
+/>
+<br/>
+
+<label for="DiabetesPedigreeFunction">Diabetes Pedigree Function</label>
+<input id="DiabetesPedigreeFunction" name="DiabetesPedigreeFunction" type="number" step="0.001"
+{% if DiabetesPedigreeFunction %}value="{{DiabetesPedigreeFunction}}"{% endif %}
+/>
+<br/>
+
+<label for="Age">Age</label>
+<input id="Age" name="Age" type="number"
+{% if Age %}value="{{Age}}"{% endif %}
+/>
+<br/>
+
+<input type="submit" value="Submit test results"/>
+</form>
+{% include 'diabetes/footer.html' %}
