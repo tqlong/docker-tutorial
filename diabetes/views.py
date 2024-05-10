@@ -14,9 +14,6 @@ def predict(request):
         'status': 'Input test results'
     }
     if request.method == "POST":
-        # with open('request.log', 'w') as f:
-        #     print(dict(request.POST.items()), file=f)
-        #     print(request.POST['Pregnancies'], file=f)
         prediction = get_prediction(model, request.POST)
         context = {
             'status': f"Prediction = {prediction['class_idx']} = {prediction['class_name']}"
